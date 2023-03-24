@@ -1,5 +1,3 @@
-## Template repo
+## The Odin Projec Weather App
 
-Contains configurations for eslint, prettier, babel and other tools I enjoy using.
-
-https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
+A simple weather app. Practice for API use and async JS
