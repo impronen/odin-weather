@@ -16,3 +16,5 @@ Start with building the API fetching in console / text to almost blank HTML (mod
 Hardcode HTML proper (view)
 Build a controller that directs actions and calls model (controller)
 Plan & build UI elements
+
+Icons from https://bas.dev/work/meteocons

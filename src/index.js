@@ -1,3 +1,6 @@
-import fetchWeather from './modules/model/api';
+import './style.css';
+import fetchWeather from './modules/api';
+import injectData from './modules/controller';
 
-fetchWeather('Mikkeli');
+fetchWeather('New York');
+injectData();
