@@ -1,5 +1,11 @@
 ## The Weather App
 
+27/3/2023
+
+Basic functionality is completed, tho the code is ugly as sin. I have trouble with encodeURI(),
+which by all accounts should be able to encode location names with special charachters (äöå) to
+a format that can be sent as a fetch request but it doesn't do it.
+
 24/3/2023 - initial notes
 
 **Features:**

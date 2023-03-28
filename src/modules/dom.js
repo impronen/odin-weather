@@ -15,10 +15,10 @@ const updateDisplay = (weatherData) => {
     description.textContent = `${weatherData.current.condition.text}`;
   }
   function updateIcon() {
-    const data = weatherJSON.find(
+    const icon = weatherJSON.find(
       (item) => item.code === weatherData.current.condition.code
     );
-    currentIcon.src = `../src/assets/icons/line/all/${data.day}`;
+    currentIcon.src = `../src/assets/icons/line/all/${icon.day}`;
     currentIcon.alt = `${weatherData.current.condition.text}`;
   }
   updateNow();
