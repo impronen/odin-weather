@@ -15,7 +15,6 @@ const injectData = () => {
       } else if (element === 'å') {
         iteratedCity.push('a');
       } else {
-        console.log(element);
         iteratedCity.push(element);
       }
     });
