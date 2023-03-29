@@ -13,3 +13,16 @@ main {
   display: flex;
   justify-content: center;
 }
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.currentWeatherContainer {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

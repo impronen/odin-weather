@@ -1,5 +1,11 @@
 ## The Weather App
 
+28/3/2023
+
+Realised that all the previous trouble was cause weatherAPI is bit crap, when it comes to
+special characters. So I needed a function that replaces single characters when looping
+over the string, after it's been split to an array. Clumsy but hey, it works.
+
 27/3/2023
 
 Basic functionality is completed, tho the code is ugly as sin. I have trouble with encodeURI(),
@@ -12,7 +18,7 @@ a format that can be sent as a fetch request but it doesn't do it.
 
 - simple ui
 - search with city name and investigate how to use user location (might not be easy, implement last)
-- relatively simple app but still use MVC to maintain structure and maintainability for future features
+- relatively simple app but still use MVC to maintain structure and maintainability for future features (basically abandoned later on)
 - find some icons or something to represent weather visually
 - (possibly) see how to have a changing background image based on location or/and weather
 
