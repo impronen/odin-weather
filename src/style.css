@@ -6,7 +6,41 @@ header {
 }
 
 body {
-  background-color: rgb(132, 224, 238);
+  color: #27241c;
+  font-family: roboto, -apple-system, BlinkMacSystemFont, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+header {
+  padding-bottom: 25px;
+}
+
+button {
+  background-color: #ffc3a5;
+  font-size: 14px;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.citysearch {
+  font-size: 14px;
+  padding: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  border-radius: 25px;
+  margin-right: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 main {
@@ -25,4 +59,39 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.weather-data {
+  padding: 3%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.23);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(7.6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: default;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#tempterature {
+  font-size: 44px;
+}
+
+#description {
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+#city,
+#country {
+  text-align: center;
+  font-size: smaller;
 }
