@@ -27,7 +27,12 @@ const updateDisplay = (weatherData) => {
     const icon = weatherJSON.find(
       (item) => item.code === weatherData.current.condition.code
     );
-    currentIcon.src = `../src/assets/icons/line/all/${icon.day}`;
+    if (weatherData.current.is_day === 0) {
+      currentIcon.src = `../src/assets/icons/line/all/${icon.night}`;
+    } else {
+      currentIcon.src = `../src/assets/icons/line/all/${icon.day}`;
+    }
+
     currentIcon.alt = `${weatherData.current.condition.text}`;
   }
   updateNow();
