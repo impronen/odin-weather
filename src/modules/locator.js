@@ -1,19 +1,24 @@
+import fetchWeather from './api';
+
 const userLocator = async () => {
-  let userLocation = [];
+  function success(pos) {
+    const userLocation = pos.coords;
+    fetchWeather(`${userLocation.latitude},${userLocation.longitude}`);
+  }
   const options = {
     enableHighAccuracy: true,
     timeout: 5000,
     maximumAge: 0,
   };
-  function success(pos) {
-    userLocation.push(pos.coords);
-    console.log(userLocation);
-    return userLocation;
-  }
+
   function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
   }
-  navigator.geolocation.getCurrentPosition(success, error, options);
+  try {
+    navigator.geolocation.getCurrentPosition(success, error, options);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export default userLocator;
