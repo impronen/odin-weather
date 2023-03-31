@@ -8,10 +8,13 @@
   <script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
   <body>
     <header>
-      <h1>Weather thingy</h1>
+      <h1 class="mainHeading">Weather thingy</h1>
       <div class="search">
         <input type="text" class="citysearch" placeholder="Search city..." />
         <button id="runsearch">Search</button>
+      </div>
+      <div class="scaleChanger">
+        <p>C / F</p>
       </div>
     </header>
     <main>
@@ -30,10 +33,27 @@
             <div id="country"></div>
           </div>
           <div class="weather-data additional-data">
-            <div id="humidity"></div>
-            <div id="airPressure"></div>
-            <div id="chanceOfRain"></div>
-            <div id="windSpeed"></div>
+            <div class="datapoint">
+              <div id="humidityIcon">
+                <img
+                  src="../src/assets/icons/line/all/raindrops.svg"
+                  alt="Clearday"
+                  id="currentIcon"
+                  height="40"
+                />
+                <p>Humidity</p>
+                <div id="humidityValue"></div>
+              </div>
+            </div>
+            <div id="airPressure">
+              <div id="airpressureIcon"></div>
+            </div>
+            <div id="chanceOfRain">
+              <div id="chanceOfRainIcon"></div>
+            </div>
+            <div id="windSpeed">
+              <div id="windSpeedIcon"></div>
+            </div>
           </div>
         </div>
         <div class="forecastContainer"></div>

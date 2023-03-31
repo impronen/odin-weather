@@ -7,7 +7,7 @@ const updateDisplay = (weatherData) => {
   const country = document.querySelector('#country');
   const currentIcon = document.querySelector('#currentIcon');
 
-  const humidity = document.querySelector('#humidity');
+  const humidity = document.querySelector('#humidityValue');
   const airPressure = document.querySelector('#airPressure');
   const chanceOfRain = document.querySelector('#chanceOfRain');
   const windSpeed = document.querySelector('#windSpeed');
@@ -18,7 +18,7 @@ const updateDisplay = (weatherData) => {
     country.textContent = `${weatherData.location.country}`;
     description.textContent = `${weatherData.current.condition.text}`;
 
-    humidity.textContent = `Humidity: ${weatherData.current.humidity}`;
+    humidity.textContent = `${weatherData.current.humidity}`;
     airPressure.textContent = `Air pressure: ${weatherData.current.pressure_mb}`;
     chanceOfRain.textContent = `Chance of rain: ${weatherData.forecast.forecastday[0].day.daily_chance_of_rain}%`;
     windSpeed.textContent = `Wind speed: ${weatherData.current.wind_kph}/kph`;

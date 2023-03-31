@@ -6,6 +6,8 @@ header {
 }
 
 body {
+  margin: auto;
+  max-width: 1090px;
   color: #27241c;
   font-family: roboto, -apple-system, BlinkMacSystemFont, 'Open Sans',
     'Helvetica Neue', sans-serif;
@@ -18,7 +20,12 @@ body {
 }
 
 header {
-  padding-bottom: 25px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.mainHeading {
+  margin-left: -2%;
 }
 
 button {
@@ -29,6 +36,10 @@ button {
   border-radius: 25px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.scaleChanger {
+  margin-left: -10%;
 }
 
 .citysearch {
@@ -55,13 +66,15 @@ main {
 }
 
 .currentWeatherContainer {
-  width: 90%;
+  width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.weather-data {
+.basic-data {
+  align-self: flex-start;
+  margin-top: 3%;
   padding: 3%;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.23);
@@ -71,6 +84,31 @@ main {
   -webkit-backdrop-filter: blur(7.6px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   cursor: default;
+}
+
+.additional-data {
+  display: flex;
+  max-width: 30%;
+  flex-wrap: wrap;
+}
+
+.additional-data > div {
+  width: 120px;
+  margin: 10%;
+  padding: 15%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.082);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(7.6px);
+  border: 1px solid rgba(255, 255, 255, 0.048);
+  cursor: default;
+}
+
+.datapoint {
+  display: flex;
+  flex-direction: row;
 }
 
 .topRow {
