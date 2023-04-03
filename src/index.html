@@ -14,7 +14,20 @@
         <button id="runsearch">Search</button>
       </div>
       <div class="scaleChanger">
-        <p>C / F</p>
+        <img
+          src=""
+          alt="Celcius"
+          class="tempIcon"
+          id="celciusIcon"
+          height="60"
+        />
+        <img
+          src=""
+          alt="Farenheit"
+          class="tempIcon"
+          id="farenheitIcon"
+          height="60"
+        />
       </div>
     </header>
     <main>
@@ -45,7 +58,7 @@
                   src="../src/assets/icons/line/all/raindrops.svg"
                   alt="Clearday"
                   id="humidityIcon"
-                  height="40"
+                  height="50"
                 />
                 <p>Humidity</p>
                 <div id="humidityValue"></div>
@@ -58,7 +71,7 @@
                   src="../src/assets/icons/line/all/raindrops.svg"
                   alt="Clearday"
                   id="airPressureIcon"
-                  height="40"
+                  height="50"
                 />
               </div>
               <p>Airpressure</p>
@@ -70,7 +83,7 @@
                   src="../src/assets/icons/line/all/raindrops.svg"
                   alt="Clearday"
                   id="chanceOfRainIcon"
-                  height="40"
+                  height="50"
                 />
               </div>
               <p>Chance of rain</p>
@@ -82,7 +95,7 @@
                   src="../src/assets/icons/line/all/raindrops.svg"
                   alt="Clearday"
                   id="windSpeedIcon"
-                  height="40"
+                  height="50"
                 />
               </div>
               <p>Wind speed</p>
@@ -91,7 +104,7 @@
           </div>
         </div>
         <div class="forecastContainer">
-          <h2 class="forecast">Forecast</h2>
+          <h2 class="forecast">5-day forecast</h2>
           <div class="forecastCards">
             <div class="days">
               <div class="icon">
@@ -103,7 +116,10 @@
                   height="50"
                 />
               </div>
-              <div class="temperature"></div>
+              <div class="temps">
+                <div class="temperature"></div>
+                <div class="temperatureLow"></div>
+              </div>
               <div class="description"></div>
             </div>
             <div class="days">
@@ -116,7 +132,10 @@
                   height="50"
                 />
               </div>
-              <div class="temperature"></div>
+              <div class="temps">
+                <div class="temperature"></div>
+                <div class="temperatureLow"></div>
+              </div>
               <div class="description"></div>
             </div>
             <div class="days">
@@ -129,7 +148,10 @@
                   height="50"
                 />
               </div>
-              <div class="temperature"></div>
+              <div class="temps">
+                <div class="temperature"></div>
+                <div class="temperatureLow"></div>
+              </div>
               <div class="description"></div>
             </div>
             <div class="days">
@@ -142,7 +164,10 @@
                   height="50"
                 />
               </div>
-              <div class="temperature"></div>
+              <div class="temps">
+                <div class="temperature"></div>
+                <div class="temperatureLow"></div>
+              </div>
               <div class="description"></div>
             </div>
             <div class="days">
@@ -155,7 +180,10 @@
                   height="50"
                 />
               </div>
-              <div class="temperature"></div>
+              <div class="temps">
+                <div class="temperature"></div>
+                <div class="temperatureLow"></div>
+              </div>
               <div class="description"></div>
             </div>
           </div>

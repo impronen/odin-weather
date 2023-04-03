@@ -32,10 +32,15 @@ const updateDisplay = (weatherData) => {
     const chanceOfRainIcon = document.querySelector('#chanceOfRainIcon');
     const windSpeedIcon = document.querySelector('#windSpeedIcon');
 
+    const celciusIcon = document.querySelector('#celciusIcon');
+    const farenheitIcon = document.querySelector('#farenheitIcon');
+
     humidityIcon.src = icons['humidity.svg'];
     airPressureIcon.src = icons['barometer.svg'];
     chanceOfRainIcon.src = icons['umbrella.svg'];
     windSpeedIcon.src = icons['windsock.svg'];
+    celciusIcon.src = icons['thermometer-celsius.svg'];
+    farenheitIcon.src = icons['thermometer-fahrenheit.svg'];
   }
 
   function updateNow() {
@@ -53,7 +58,6 @@ const updateDisplay = (weatherData) => {
   function updateIcons() {
     const weatherIcons = document.querySelectorAll('.weatherIcon');
     for (let i = 0; i < weatherIcons.length; i++) {
-      console.log(weatherData.forecast.forecastday[i]);
       const icon = weatherJSON.find(
         (item) =>
           item.code === weatherData.forecast.forecastday[i].day.condition.code
@@ -73,15 +77,18 @@ const updateDisplay = (weatherData) => {
 
   function updateForecast() {
     const forecastTemps = document.querySelectorAll('.temperature');
+    const forecastTempsLow = document.querySelectorAll('.temperatureLow');
     const forecastDescription = document.querySelectorAll('.description');
+
     for (let i = 0; i < forecastTemps.length; i++) {
-      console.log(forecastTemps);
-      /* console.log(forecastDescription); */
       forecastDescription[i].innerText =
         weatherData.forecast.forecastday[i].day.condition.text;
       forecastTemps[
         i
-      ].innerText = `Max: ${weatherData.forecast.forecastday[i].day.maxtemp_c}C`;
+      ].innerText = `High: ${weatherData.forecast.forecastday[i].day.maxtemp_c}C`;
+      forecastTempsLow[
+        i
+      ].innerText = `Low: ${weatherData.forecast.forecastday[i].day.mintemp_c}C`;
     }
   }
 
