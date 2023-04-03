@@ -15,8 +15,8 @@ const icons = importIcons(
 /* DOM MANIPULATION */
 
 const updateDisplay = (weatherData) => {
-  const tempterature = document.querySelector('#tempterature');
-  const description = document.querySelector('#description');
+  const tempterature = document.querySelector('#currentTempterature');
+  const description = document.querySelector('#currentDescription');
   const city = document.querySelector('#city');
   const country = document.querySelector('#country');
   const currentIcon = document.querySelector('#currentIcon');
@@ -71,9 +71,24 @@ const updateDisplay = (weatherData) => {
     }
   }
 
+  function updateForecast() {
+    const forecastTemps = document.querySelectorAll('.temperature');
+    const forecastDescription = document.querySelectorAll('.description');
+    for (let i = 0; i < forecastTemps.length; i++) {
+      console.log(forecastTemps);
+      /* console.log(forecastDescription); */
+      forecastDescription[i].innerText =
+        weatherData.forecast.forecastday[i].day.condition.text;
+      forecastTemps[
+        i
+      ].innerText = `Max: ${weatherData.forecast.forecastday[i].day.maxtemp_c}C`;
+    }
+  }
+
   updateNow();
   loadStaticIcons();
   updateIcons();
+  updateForecast();
 };
 
 export default updateDisplay;

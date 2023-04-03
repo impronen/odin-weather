@@ -118,14 +118,14 @@
   },
   {
     "code": 1186,
-    "day": "Moderate rain at times",
-    "night": "Moderate rain at times",
+    "day": "partly-cloudy-day-rain.svg",
+    "night": "partly-cloudy-night-rain.svg",
     "icon": 299
   },
   {
     "code": 1189,
-    "day": "raindrop.svg",
-    "night": "raindrop.svg",
+    "day": "rain.svg",
+    "night": "rain.svg",
     "icon": 302
   },
   {
@@ -136,14 +136,14 @@
   },
   {
     "code": 1195,
-    "day": "raindrops.svg",
-    "night": "raindrops.svg",
+    "day": "rain.svg",
+    "night": "rain.svg",
     "icon": 308
   },
   {
     "code": 1198,
-    "day": "Light freezing rain",
-    "night": "Light freezing rain",
+    "day": "sleet.svg",
+    "night": "sleet.svg",
     "icon": 311
   },
   {
@@ -166,8 +166,8 @@
   },
   {
     "code": 1210,
-    "day": "Patchy light snow",
-    "night": "Patchy light snow",
+    "day": "partly-cloudy-day-snow.svg",
+    "night": "partly-cloudy-night-snow.svg",
     "icon": 323
   },
   {
