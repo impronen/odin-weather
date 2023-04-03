@@ -95,8 +95,8 @@ main {
 
 .additional-data > div {
   width: 120px;
-  margin: 10%;
-  padding: 15%;
+  margin-bottom: 5%;
+  padding: 10%;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.082);
   border-radius: 16px;
@@ -137,8 +137,24 @@ main {
 
 .forecastContainer {
   display: flex;
+  flex-direction: column;
 }
 
 .forecastCards {
   display: flex;
+  justify-content: space-evenly;
+  max-width: 90%;
+  margin-left: -5%;
+}
+
+.forecastCards > div {
+  padding: 5%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.082);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(7.6px);
+  border: 1px solid rgba(255, 255, 255, 0.048);
+  cursor: default;
 }

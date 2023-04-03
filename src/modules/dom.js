@@ -26,32 +26,6 @@ const updateDisplay = (weatherData) => {
   const chanceOfRainValue = document.querySelector('#chanceOfRainValue');
   const windSpeedValue = document.querySelector('#windSpeedValue');
 
-  function updateNow() {
-    tempterature.textContent = `${weatherData.current.temp_c}C`;
-    city.textContent = `${weatherData.location.name}, ${weatherData.location.region}`;
-    country.textContent = `${weatherData.location.country}`;
-    description.textContent = `${weatherData.current.condition.text}`;
-
-    humidity.textContent = `${weatherData.current.humidity}`;
-    airPressureValue.textContent = `${weatherData.current.pressure_mb}`;
-    chanceOfRainValue.textContent = `${weatherData.forecast.forecastday[0].day.daily_chance_of_rain}%`;
-    windSpeedValue.textContent = `${weatherData.current.wind_kph}/kph`;
-  }
-  function updateCurrentIcon() {
-    const icon = weatherJSON.find(
-      (item) => item.code === weatherData.current.condition.code
-    );
-
-    if (weatherData.current.is_day === 0) {
-      currentIcon.src = icons[icon.night];
-    } else {
-      currentIcon.src = icons[icon.day];
-    }
-    console.log('updating');
-    console.log(icons);
-    currentIcon.alt = `${weatherData.current.condition.text}`;
-  }
-
   function loadStaticIcons() {
     const humidityIcon = document.querySelector('#humidityIcon');
     const airPressureIcon = document.querySelector('#airPressureIcon');
@@ -64,9 +38,42 @@ const updateDisplay = (weatherData) => {
     windSpeedIcon.src = icons['windsock.svg'];
   }
 
+  function updateNow() {
+    tempterature.textContent = `${weatherData.current.temp_c}C`;
+    city.textContent = `${weatherData.location.name}, ${weatherData.location.region}`;
+    country.textContent = `${weatherData.location.country}`;
+    description.textContent = `${weatherData.current.condition.text}`;
+
+    humidity.textContent = `${weatherData.current.humidity}`;
+    airPressureValue.textContent = `${weatherData.current.pressure_mb}`;
+    chanceOfRainValue.textContent = `${weatherData.forecast.forecastday[0].day.daily_chance_of_rain}%`;
+    windSpeedValue.textContent = `${weatherData.current.wind_kph}/kph`;
+  }
+
+  function updateIcons() {
+    const weatherIcons = document.querySelectorAll('.weatherIcon');
+    for (let i = 0; i < weatherIcons.length; i++) {
+      console.log(weatherData.forecast.forecastday[i]);
+      const icon = weatherJSON.find(
+        (item) =>
+          item.code === weatherData.forecast.forecastday[i].day.condition.code
+      );
+      weatherIcons[i].src = icons[icon.day];
+    }
+    const icon = weatherJSON.find(
+      (item) => item.code === weatherData.current.condition.code
+    );
+
+    if (weatherData.current.is_day === 0) {
+      currentIcon.src = icons[icon.night];
+    } else {
+      currentIcon.src = icons[icon.day];
+    }
+  }
+
   updateNow();
-  updateCurrentIcon();
   loadStaticIcons();
+  updateIcons();
 };
 
 export default updateDisplay;
