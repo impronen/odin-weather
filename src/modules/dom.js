@@ -78,13 +78,13 @@ const updateDisplay = (weatherData) => {
     const forecastTempsLow = document.querySelectorAll('.temperatureLow');
     const forecastDescription = document.querySelectorAll('.description');
 
-    for (let i = 0; i < forecastTemps.length; i++) {
-      forecastDescription[i].innerText =
+    for (let i = 1; i < forecastTemps.length + 1; i++) {
+      forecastDescription[i - 1].innerText =
         weatherData.forecast.forecastday[i].day.condition.text;
-      forecastTemps[i].innerText = `High: ${Math.round(
+      forecastTemps[i - 1].innerText = `High: ${Math.round(
         weatherData.forecast.forecastday[i].day.maxtemp_c
       )}C`;
-      forecastTempsLow[i].innerText = `Low: ${Math.round(
+      forecastTempsLow[i - 1].innerText = `Low: ${Math.round(
         weatherData.forecast.forecastday[i].day.mintemp_c
       )}C`;
     }
