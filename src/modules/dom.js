@@ -33,26 +33,24 @@ const updateDisplay = (weatherData) => {
     const windSpeedIcon = document.querySelector('#windSpeedIcon');
 
     const celciusIcon = document.querySelector('#celciusIcon');
-    const farenheitIcon = document.querySelector('#farenheitIcon');
 
     humidityIcon.src = icons['humidity.svg'];
     airPressureIcon.src = icons['barometer.svg'];
     chanceOfRainIcon.src = icons['umbrella.svg'];
     windSpeedIcon.src = icons['windsock.svg'];
     celciusIcon.src = icons['thermometer-celsius.svg'];
-    farenheitIcon.src = icons['thermometer-fahrenheit.svg'];
   }
 
   function updateNow() {
-    tempterature.textContent = `${weatherData.current.temp_c}C`;
+    tempterature.textContent = `${Math.round(weatherData.current.temp_c)}C`;
     city.textContent = `${weatherData.location.name}, ${weatherData.location.region}`;
     country.textContent = `${weatherData.location.country}`;
     description.textContent = `${weatherData.current.condition.text}`;
 
-    humidity.textContent = `${weatherData.current.humidity}`;
-    airPressureValue.textContent = `${weatherData.current.pressure_mb}`;
+    humidity.textContent = `${weatherData.current.humidity} %`;
+    airPressureValue.textContent = `${weatherData.current.pressure_mb} hPa`;
     chanceOfRainValue.textContent = `${weatherData.forecast.forecastday[0].day.daily_chance_of_rain}%`;
-    windSpeedValue.textContent = `${weatherData.current.wind_kph}/kph`;
+    windSpeedValue.textContent = `${weatherData.current.wind_kph} / kph`;
   }
 
   function updateIcons() {
@@ -83,12 +81,12 @@ const updateDisplay = (weatherData) => {
     for (let i = 0; i < forecastTemps.length; i++) {
       forecastDescription[i].innerText =
         weatherData.forecast.forecastday[i].day.condition.text;
-      forecastTemps[
-        i
-      ].innerText = `High: ${weatherData.forecast.forecastday[i].day.maxtemp_c}C`;
-      forecastTempsLow[
-        i
-      ].innerText = `Low: ${weatherData.forecast.forecastday[i].day.mintemp_c}C`;
+      forecastTemps[i].innerText = `High: ${Math.round(
+        weatherData.forecast.forecastday[i].day.maxtemp_c
+      )}C`;
+      forecastTempsLow[i].innerText = `Low: ${Math.round(
+        weatherData.forecast.forecastday[i].day.mintemp_c
+      )}C`;
     }
   }
 
