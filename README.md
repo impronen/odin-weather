@@ -11,6 +11,8 @@ Live site: https://impronen.github.io/odin-weather/
 - possibility search locations manually
 - five day forecast
 - mobile responsiveness
+- animated weather icons by [Bas Milius](https://bas.dev/work/meteocons)
+- the main icon varies between night / day variants based on location time of day
 
 # THOUGHTS
 
