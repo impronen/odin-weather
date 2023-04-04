@@ -1,7 +1,7 @@
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -20,9 +20,9 @@ body {
 }
 
 header {
-  width: 95%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .mainHeading {
@@ -39,15 +39,11 @@ button {
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.scaleChanger {
-  margin-left: -10%;
-}
-
 .citysearch {
   font-size: 14px;
   padding: 15px;
   padding-left: 15px;
-  padding-right: 15px;
+
   border: none;
   border-radius: 25px;
   margin-right: 15px;
@@ -64,19 +60,20 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: 95%;
 }
 
 .currentWeatherContainer {
-  width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .basic-data {
   align-self: flex-start;
-  margin-top: 3%;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 3%;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.23);
@@ -91,13 +88,15 @@ main {
 .additional-data {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-right: 1%;
 }
 
 .additional-data > div {
   width: 110px;
   height: 110px;
-  margin-left: 2%;
-  margin-bottom: 2%;
+  margin-left: 20px;
+  margin-bottom: 20px;
   padding: 8%;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.082);
@@ -142,18 +141,21 @@ main {
   flex-direction: column;
 }
 
+.forecast {
+  text-align: center;
+}
+
 .forecastCards {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .forecastCards > div {
-  min-width: 130px;
-  padding-left: 4%;
-  padding-right: 4%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  margin-right: 1%;
+  min-width: 100px;
+  max-width: 120px;
+  padding: 15px;
+  margin: 5px;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.082);
   border-radius: 16px;
@@ -166,7 +168,6 @@ main {
 
 .temps {
   display: flex;
-  flex-direction: row;
 }
 
 .temperature,
@@ -174,4 +175,27 @@ main {
 .temperatureLow {
   margin: 1%;
   font-size: small;
+}
+
+@media screen and (max-width: 600px) {
+  .basic-data {
+    width: 85%;
+  }
+  .currentWeatherContainer,
+  .additional-data {
+    justify-content: center;
+    margin-right: 0px;
+  }
+  .additional-data > div,
+  .forecastCards > div {
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+  .additional-data > div {
+    max-width: 100px;
+  }
+  p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }
