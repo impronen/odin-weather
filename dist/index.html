@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  <script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
+  <body>
+    <header>
+      <h1 class="mainHeading">Weather thingy</h1>
+      <div class="headerRightSide">
+        <div class="scaleChanger">
+          <img
+            src=""
+            alt="Celcius"
+            class="tempIcon"
+            id="celciusIcon"
+            height="60"
+          />
+        </div>
+        <div class="search">
+          <input type="text" class="citysearch" placeholder="Search city..." />
+          <button id="runsearch">Search</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="mainContainer">
+        <div class="currentWeatherContainer">
+          <div class="weather-data basic-data days">
+            <div class="topRow">
+              <div class="icon">
+                <img
+                  src=""
+                  alt="Clearday"
+                  id="currentIcon"
+                  class="weatherIcon"
+                  height="80"
+                />
+              </div>
+              <div id="currentTempterature"></div>
+            </div>
+
+            <div id="currentDescription"></div>
+            <div id="city"></div>
+            <div id="country"></div>
+          </div>
+          <div class="weather-data additional-data">
+            <div class="humidityContainer">
+              <p>Humidity</p>
+              <div class="iconAndData">
+                <div class="humidityIcon">
+                  <img src="" alt="Clearday" id="humidityIcon" height="50" />
+                </div>
+                <div id="humidityValue"></div>
+              </div>
+            </div>
+
+            <div id="airPressure">
+              <p>Airpressure</p>
+              <div class="iconAndData">
+                <div class="airpressureIcon">
+                  <img
+                    src="../src/assets/icons/line/all/raindrops.svg"
+                    alt="Clearday"
+                    id="airPressureIcon"
+                    height="50"
+                  />
+                </div>
+                <div id="airPressureValue"></div>
+              </div>
+            </div>
+            <div id="chanceOfRain">
+              <p>Chance of rain</p>
+              <div class="iconAndData">
+                <div class="chanceOfRainIcon">
+                  <img
+                    src=""
+                    alt="Clearday"
+                    id="chanceOfRainIcon"
+                    height="50"
+                  />
+                </div>
+
+                <div id="chanceOfRainValue"></div>
+              </div>
+            </div>
+            <div id="windSpeed">
+              <p>Wind speed</p>
+              <div class="iconAndData">
+                <div class="windSpeedIcon">
+                  <img src="" alt="Clearday" id="windSpeedIcon" height="50" />
+                </div>
+                <div id="windSpeedValue"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="forecastContainer">
+          <h2 class="forecast">5-day forecast</h2>
+          <div class="forecastCards">
+            <div class="days">
+              <div class="icon">
+                <img
+                  src=""
+                  alt="Clearday"
+                  id="currentIcon"
+                  class="weatherIcon"
+                  height="50"
+                />
+              </div>
+              <div class="description"></div>
+              <div class="temps">
+                <div class="temperature"></div>
+                <div class="temperatureLow"></div>
+              </div>
+            </div>
+            <div class="days">
+              <div class="icon">
+                <img
+                  src=""
+                  alt="Clearday"
+                  id="currentIcon"
+                  class="weatherIcon"
+                  height="50"
+                />
+              </div>
+              <div class="description"></div>
+              <div class="temps">
+                <div class="temperature"></div>
+                <div class="temperatureLow"></div>
+              </div>
+            </div>
+            <div class="days">
+              <div class="icon">
+                <img
+                  src=""
+                  alt="Clearday"
+                  id="currentIcon"
+                  class="weatherIcon"
+                  height="50"
+                />
+              </div>
+              <div class="description"></div>
+              <div class="temps">
+                <div class="temperature"></div>
+                <div class="temperatureLow"></div>
+              </div>
+            </div>
+            <div class="days">
+              <div class="icon">
+                <img
+                  src=""
+                  alt="Clearday"
+                  id="currentIcon"
+                  class="weatherIcon"
+                  height="50"
+                />
+              </div>
+              <div class="description"></div>
+              <div class="temps">
+                <div class="temperature"></div>
+                <div class="temperatureLow"></div>
+              </div>
+            </div>
+            <div class="days">
+              <div class="icon">
+                <img
+                  src=""
+                  alt="Clearday"
+                  id="currentIcon"
+                  class="weatherIcon"
+                  height="50"
+                />
+              </div>
+              <div class="description"></div>
+              <div class="temps">
+                <div class="temperature"></div>
+                <div class="temperatureLow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>a weather app by <a href="https://github.com/impronen">antero</a></p>
+      <p>
+        animated weather icons by
+        <a href="https://bas.dev/work/meteocons">Bas Milius</a>
+      </p>
+    </footer>
+  </body>
+</html>
