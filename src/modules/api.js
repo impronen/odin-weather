@@ -1,5 +1,4 @@
 import updateDisplay from './dom';
-import weatherStorage from './weatherObject';
 
 const fetchWeather = async (location) => {
   async function searchWithCity() {
@@ -13,7 +12,6 @@ const fetchWeather = async (location) => {
       const responseData = await response.json();
       console.log(responseData);
       updateDisplay(responseData);
-      weatherStorage(responseData);
     } catch (error) {
       console.log(error);
     }

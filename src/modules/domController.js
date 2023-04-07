@@ -26,12 +26,14 @@ const injectData = () => {
   searchBtn.addEventListener('click', function runSearch() {
     const searcParameter = fixSpecialChars();
     fetchWeather(searcParameter);
+    cityToSearch.value = '';
   });
 
   cityToSearch.addEventListener('keypress', function runSearch(event) {
     if (event.key === 'Enter') {
       const searcParameter = fixSpecialChars();
       fetchWeather(searcParameter);
+      cityToSearch.value = '';
     }
   });
 };
