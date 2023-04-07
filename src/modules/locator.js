@@ -3,6 +3,7 @@ import fetchWeather from './api';
 const userLocator = async () => {
   function success(pos) {
     const userLocation = pos.coords;
+    console.log(userLocation);
     fetchWeather(`${userLocation.latitude},${userLocation.longitude}`);
   }
   const options = {
@@ -13,6 +14,7 @@ const userLocator = async () => {
 
   function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
+    fetchWeather('London');
   }
   try {
     navigator.geolocation.getCurrentPosition(success, error, options);
